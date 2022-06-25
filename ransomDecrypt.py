@@ -21,7 +21,10 @@ def iterator(directoryPath):
             elif os.path.isdir(item):
                 iterator(item)
 
-iterator(path)
+try:
+    iterator(path)
+except:
+    print("Upsss, something went wrong! Take a look for the typed path")
 
 pathKey = input("Type the path of the key to decrypt:")
 
